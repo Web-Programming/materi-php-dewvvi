@@ -5,20 +5,20 @@ $pesan = '';
 $postErrors = [];
 $postSuccess = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama = TRIMS($_POST['nama'] ?? '');
-    $email = TRIMS($_POST['email'] ?? '');
-    $pesan = TRIMS($_POST['pesan'] ?? '');
+    $nama = trim($_POST['nama'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $pesan = trim($_POST['pesan'] ?? '');
     // VALIDASI SEDERHANA
     if ($nama === '') {
-        $postErrors[]= 'Nama wajib diisi.'
+        $postErrors[]= 'Nama wajib diisi.';
     }
     if ($email === '') {
-        $postErrors[]= 'email wajib diisi.'
-    } elseif (filter_var($email, , filter_validate_email)) {
-        $postErrors[]= 'format email tidak valid.'
+        $postErrors[]= 'email wajib diisi.';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $postErrors[]= 'format email tidak valid.';
     }
     if ($pesan === '') {
-        $postErrors[]= 'Nama wajib diisi.'
+        $postErrors[]= 'pesan wajib diisi.';
     }
     if (empty($postErrors)) {
         $postSuccess = true;

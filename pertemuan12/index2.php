@@ -11,7 +11,7 @@
         <label for="nama">Nama</label>
         <input id= "nama" name = "nama" type="text" placeholder = "Nama anda"> <br>
         <label for="email">Email</label>
-        <input id= "email" name = "nama" type="email" placeholder = "Nama@email.com"> <br>
+        <input id= "email" name = "email" type="email" placeholder = "Nama@email.com"> <br>
          <label for="pesan">Pesan</label>
          <textarea name="pesan" id="pesan" rows = "4" placeholder = "Isi pesan anda"></textarea><br>
          <button type = "submit">Kirim (POST)</button>
