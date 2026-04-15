@@ -1,3 +1,6 @@
+<?php
+// No backend logic needed - pure presentation page
+?>
 <!DOCTYPE html>
 <html>
 
@@ -28,7 +31,7 @@
     <div class="container d-flex align-items-center">
 
       <!-- TOMBOL BACK (PANAH) -->
-      <a href="pakaiPHP.php" class="text-white me-3" style="text-decoration:none; font-size:20px;">
+      <a href="index.php" class="text-white me-3" style="text-decoration:none; font-size:20px;">
         &#8592;
       </a>
 
@@ -46,6 +49,7 @@
     <p>Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is
       strongly advised that you thoroughly read and understand these terms prior to using the Application.</p>
     <div><br>
+
       <p>Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is
         strictly
         prohibited. Any attempts to extract the source code of the Application, translate the Application into other
@@ -53,11 +57,13 @@
         other
         intellectual property rights related to the Application remain the property of the Service Provider.</p>
     </div><br>
+
     <p>The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As
       such, they reserve the right to modify the Application or charge for their services at any time and for any
       reason.
       The Service Provider assures you that any charges for the Application or its services will be clearly communicated
       to you.</p><br>
+
     <p>The Application stores and processes personal data that you have provided to the Service Provider in order to
       provide the Service. It is your responsibility to maintain the security of your phone and access to the
       Application.
@@ -65,7 +71,9 @@
       restrictions and limitations imposed by the official operating system of your device. Such actions could expose
       your
       phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the
-      Application not functioning correctly or at all.</p>
+      Application not functioning correctly or at all.
+    </p>
+
     <div>
       <p>Please note that the Application utilizes third-party services that have their own Terms and Conditions. Below
         are the links to the Terms and Conditions of the third-party service providers used by the Application:</p>
@@ -96,7 +104,7 @@
       while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to provide
       information to them so that they can make it available to you. The Service Provider accepts no liability for any
       loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the
-      application.</p><br><!---->
+      application.</p><br>
     <p>The Service Provider may wish to update the application at some point. The application is currently available as
       per the requirements for the operating system (and for any additional systems they decide to extend the
       availability
