@@ -1,0 +1,50 @@
+/* Background utama (hero section) */
+.bg-utama {
+    background: url('https://gapki.id/dir-site/uploads/2016/06/Multifungsi-Kebun-Sawit-Dalam-Ekosistem.jpg') center/cover;
+    height: 100vh; /* full layar */
+}
+
+/* Lapisan gelap agar teks lebih terbaca */
+.lapisan-gelap {
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+}
+
+/* Ukuran gambar pada card */
+.gambar-kartu {
+    height: 200px;
+    object-fit: cover; /* agar gambar tidak gepeng */
+}
+
+/* Warna hijau custom */
+.text-hijau {
+    color: green;
+}
+
+.bg-dokum{
+  background-color: rgb(211, 205, 205);
+  padding: 20px;
+}
+
+.bg-kontak{
+  background-color: rgb(128, 175, 131);
+  padding: 30px;
+}
+
+.garis-judul {
+    width: 80px;
+    height: 4px;
+    background-color: orange;
+}
+
+.btn-kontak {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50px; /* bikin oval */
+}
+
+.ket-footer{
+  color: rgb(199, 184, 184);
+}
