@@ -28,3 +28,9 @@ Route::post('/user/{id}/{name}', function ($id, $name) {
 
 // put dan patch utk edit
 // delete utk hapus
+
+
+// menampilkan halaman profile
+Route::get('/profile', function () {
+    return view('profile');
+});
