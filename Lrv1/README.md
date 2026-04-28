@@ -56,3 +56,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+-- utk controlle : php artisan make:controller .. -r
+-- cth : php artisan make:controller ProdukController -r //awalan hrus kapital
+-- kalau -r dibuati fungsi" nya
+-- controller kalau banyak file 
+
+-- kalau utk buat file view : php artisan make:views (namafile)
+-- cth: php artisan make:views produk
+
+
+
+
+

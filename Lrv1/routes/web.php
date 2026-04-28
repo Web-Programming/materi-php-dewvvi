@@ -34,3 +34,7 @@ Route::post('/user/{id}/{name}', function ($id, $name) {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+
+Route::resource('/produk', ProdukController ::class);
+Route::get('/produk/search', ProdukController ::class, '@search');
