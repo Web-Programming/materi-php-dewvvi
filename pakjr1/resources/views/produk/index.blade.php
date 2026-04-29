@@ -4,21 +4,39 @@
 
 @section('sidebar')
     @parent
-    @section('submenu-produk')
-        <a href="/produk/create" class="list-group-item list-group-item-action ps-4 
-        {{ request()->is('produk/create') ? 'active' : '' }}">Tambah Produk</a>
-        <a href="/produk/search" class="list-group-item list-group-item-action ps-4 
-        {{ request()->is('produk/search') ? 'active' : '' }}">Cari Produk</a>
-    @endsection
+@section('submenu-produk')
+@endsection
 @endsection
 
 @section('content')
-    <h1 class="h3 mb-3">Produk Index</h1>
-    <p class="text-muted">Halaman daftar produk menggunakan layout master.</p>
+<div class = "container-fluid">
+    <h1 class = "mb-4"> {($title)} </h1>
 
-    <div class="card">
-        <div class="card-body">
-            Konten produk bisa ditampilkan di sini.
-        </div>
+    <div class = "table-responsive">
+        <table class = "table table-striped table-bordered table-hover">
+            <thead class = "table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama produk</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach ($products as $item)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $item['name'] }}</td>
+                        <td>Rp {{ number_format($item[$i]['price'], 2, ',', '.') }}</td>
+                        <td>
+                            <a href="{{ url('/produk/' . $item[$i]['id']) }}" class="btn btn-sm btn-info">Detail</a>
+                            <a href="{{ url('/produk/' . $item[$i]['id'] . '/edit') }}"
+                                class="btn btn-sm btn-primary">Edit</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
+</div>
 @endsection
