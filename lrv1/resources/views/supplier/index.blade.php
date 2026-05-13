@@ -34,19 +34,29 @@
             <tbody>
                 @foreach ($suppliers as $index => $supplier)
                     <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $supplier['name'] }}</td>
-                        <td>{{ $supplier['phone'] }}</td>
-                        <td>{{ $supplier['address'] }}</td>
+                        <td>{{ ($suppliers->currentPage() - 1) * $suppliers->perPage() + $loop->iteration }}</td>
+                        <td>{{ $supplier->name }}</td>
+                        <td>{{ $supplier->phone }}</td>
+                        <td>{{ $supplier->address ?? '-' }}</td>
                         <td>
-                            <a href="{{ url('/supplier/' . $supplier['id']) }}" class="btn btn-sm btn-info">Detail</a>
-                            <a href="{{ url('/supplier/' . $supplier['id'] . '/edit') }}"
+                            <a href="{{ url('/supplier/' . $supplier->id) }}" class="btn btn-sm btn-info">Detail</a>
+                            <a href="{{ url('/supplier/' . $supplier->id . '/edit') }}"
                                 class="btn btn-sm btn-primary">Edit</a>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <div>
+            Menampilkan {{ $suppliers->firstItem() }}-{{ $suppliers->lastItem() }} dari {{ $suppliers->total() }}
+            supplier
+        </div>
+        <div>
+            {{ $suppliers->links() }}
+        </div>
     </div>
 </div>
 @endsection

@@ -24,12 +24,13 @@
         </div>
     @endif
 
-    <form action="{{ route('produk.store') }}" method="POST">
+    <form action="{{ route('produk.update', $product -> id) }}" method="POST">
         @csrf
+        @method('PUT')
         <div class="mb-3">
             <label for="name" class="form-label">Nama Produk</label>
             <input type="text" name="name" id="name"
-                class="form-control @error('name') is-invalid ederror"
+                class="form-control @error('name') is-invalid @enderror"
                 value="{{ old('name') }}">
             @error('name')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -39,7 +40,7 @@
         <div class="mb-3">
             <label for="price" class="form-label">Harga</label>
             <input type="number" name="price" id="price"
-                class="form-control @error('price') is-invalid ederror"
+                class="form-control @error('price') is-invalid @enderror"
                     value="{{ old('price') }}">
              @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -47,7 +48,7 @@
         </div>
 
         <div class="mb-3">
-            <textarea name="description" id="description" rows="3" class="form-control @error('description') is-invalid ederror">
+            <textarea name="description" id="description" rows="3" class="form-control @error('description') is-invalid @enderror">
                 {(old('description'))}
                 </textarea>
             @error('description')
