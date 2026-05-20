@@ -9,6 +9,7 @@ class ProductController extends Controller
 {
     public function index()
     {
+        Gate::authorize ('viewAny', Product::class);
         $title = "Daftar Produk";
         $products = Product::paginate(10);
         return view('produk.index', compact('title', 'products'));
@@ -16,12 +17,14 @@ class ProductController extends Controller
 
     public function create()
     {
+         Gate::authorize ('create-product');
         $title = "Tambah Produk";
         return view('produk.create', compact('title'));
     }
 
     public function store(Request $request)
     {
+         Gate::authorize ('create', Product::class);
         $validated = $request->validate([
             'name' => 'required|string|max:100',
             'price' => 'required|numeric|min:0',
@@ -55,6 +58,7 @@ class ProductController extends Controller
 
     public function edit(string $id)
     {
+        Gate::authorize ('update-product');
         $title = "Edit Produk";
         $product = Product::findOrFail($id);
         return view('produk.edit', compact('product', 'title'));
@@ -63,7 +67,7 @@ class ProductController extends Controller
     public function update(Request $request, string $id)
     {
         $product = Product::findOrFail($id);
-
+        Gate::authorize ('update', $Product);
         $validated = $request->validate([
             'name' => 'required|string|max:100',
             'price' => 'required|numeric|min:0',
@@ -92,6 +96,7 @@ class ProductController extends Controller
 
     public function destroy(string $id)
     {
+        Gate::authorize ('delete-product');
         $product = Product::findOrFail($id);
         $product->delete();
 

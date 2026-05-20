@@ -2,8 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Policies\ProductPolicy;
+use Illuminate\Database\Eloquent\Factories\Attribute;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+
+#[UsePolicy(ProductPolicy::class)]
 
 class Product extends Model
 {

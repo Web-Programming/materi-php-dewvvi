@@ -3,9 +3,14 @@
 namespace App\Policies;
 
 use App\Models\Product;
-
+use App\Models\User;
 class DashboardController extends Controller
 {
+
+    public function view (User $user, Product $product):bool{
+
+    }
+
     public function create (User $user):bool{
         return in_array ($user -> role, ['sales']);
     }
