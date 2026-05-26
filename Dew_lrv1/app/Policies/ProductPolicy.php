@@ -4,7 +4,7 @@ namespace App\Policies;
 
 use App\Models\Product;
 use App\Models\User;
-class DashboardController extends Controller
+class ProductPolicy 
 {
 
     public function view (User $user, Product $product):bool{
